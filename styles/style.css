@@ -30,6 +30,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -70,7 +71,6 @@ body {
 }
 
 main header {
-  border: 1px solid red;
   background-image: url("/images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -78,7 +78,7 @@ main header {
   height: 200px;
   text-align: center;
   margin-top: 90px;
-  margin-bottom: 90px;
+  margin-bottom: 45px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -99,7 +99,7 @@ main header h2 {
   color: #888F9E;
 }
 main .card {
-  padding: 40px;
+  padding: 50px;
   height: auto;
   background-color: hsl(0deg, 0%, 100%);
   box-shadow: 0px 3px 20px 2px #CED7EC;
@@ -119,6 +119,7 @@ main .card .month_price #views {
   color: #888F9E;
 }
 main .card .month_price #price {
+  margin-left: 40px;
   font-weight: 800;
   font-size: 40px;
   line-height: 55px;
@@ -133,4 +134,59 @@ main .card .month_price #price::after {
   line-height: 22px;
   letter-spacing: 0.04em;
   color: #888F9E;
+}
+main .card .slider {
+  width: 100%;
+  margin: 40px 0;
+}
+main .card .slider input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+main .card .slider input[type=range]::-webkit-slider-runnable-track {
+  background-image: linear-gradient(45deg, #0ECDC3, hsl(224deg, 65%, 95%));
+  background-size: 50%;
+  background-repeat: no-repeat;
+  height: 8px;
+  border-radius: 5px;
+}
+main .card .slider input[type=range]::-moz-range-track {
+  background-image: linear-gradient(#0ECDC3, hsl(224deg, 65%, 95%));
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  height: 8px;
+}
+main .card .slider input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -16px;
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #0ECDC3;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+main .card .slider input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  margin-top: -16px;
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #0ECDC3;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+main .card .slider input[type=range]::-webkit-slider-thumb:hover {
+  box-shadow: 0px 10px 12px #8EE8F2;
+  border: 2px solid #25aca0;
+}
+main .card .slider input[type=range]::-webkit-slider-thumb:focus {
+  box-shadow: 0px 10px 12px #8EE8F2;
+  border: 2px solid #25aca0;
 }/*# sourceMappingURL=style.css.map */

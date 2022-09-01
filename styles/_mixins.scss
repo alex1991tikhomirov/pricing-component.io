@@ -1,0 +1,10 @@
+// input styling start
+@mixin input-style{
+-webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+                
+}
+//input styling finish

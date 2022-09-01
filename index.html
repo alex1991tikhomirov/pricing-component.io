@@ -19,11 +19,12 @@
 
         <section class="card">
             <div class="month_price">
-                <p id="views">100 pageviews</p>
+                <p id="views"><output id="rangevalue">100k</output> pageviews</p>
                 <p id="price">$16.00</p>
             </div>
             <div class="slider">
-                <input type="range" id="volume" name="volume" min="0" max="5">
+                <input type="range" id="views" name="views" min="1" max="5" oninput="rangevalue.value=value" value="3"/>
+                <!-- <output id="rangevalue">50</output> -->
             </div>
             <div class="toggle">
                 <label class="switch">
