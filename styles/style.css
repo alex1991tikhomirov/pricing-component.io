@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  text-decoration: none;
+  list-style: none;
+}
+body a, body button, body li {
+  all: unset;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Manrope, "sans serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main header {
+  border: 1px solid red;
+  background-image: url("/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 540px;
+  height: 200px;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+main header h1 {
+  margin: 11px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0.015em;
+  color: #272C52;
+}
+main header h2 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #888F9E;
+}
+main .card {
+  padding: 40px;
+  height: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 20px 2px #CED7EC;
+  border-radius: 9px;
+}
+main .card .month_price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .card .month_price #views {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 135.1%;
+  letter-spacing: 0.175em;
+  color: #888F9E;
+}
+main .card .month_price #price {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 55px;
+  color: #2A325B;
+}
+main .card .month_price #price::after {
+  position: relative;
+  top: -8px;
+  content: " /month";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #888F9E;
+}/*# sourceMappingURL=style.css.map */

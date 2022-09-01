@@ -1,0 +1,111 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+// //background colors
+// $main-bg-color: hsl(230, 100%, 99%);
+// $card-bg-color: hsl(0, 0%, 100%);
+// $CTA-bg-color: hsla(227, 35%, 25%, 1);
+// $discount-bg-color: hsl(14, 92%, 95%);
+
+// //text colors
+// $main-text-color: hsla(233, 36%, 25%, 1);
+// $sub-text-color: hsla(221, 10%, 58%, 1);
+// $discount-text-color: hsl(15, 100%, 70%);
+// $CTA-text-color: hsl(226, 100%, 87%);
+
+// //slider colors
+// $slider-bg-color: hsl(174, 86%, 45%);
+// $slider-bar-color: hsl(174, 77%, 80%);
+// $empty-slider-bar-color: hsl(224, 65%, 95%);
+
+// //toggle colors
+// $toggle-bg-color: hsl(223, 50%, 87%);
+
+// //font family
+// $main-font-family: Manrope, 'sans serif';
+
+
+//beginnning of styling
+body {
+    font-family: $main-font-family;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main {
+    header {
+        border: 1px solid red;
+        background-image: url("/images/pattern-circles.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        max-width: 540px;
+        height: 200px;
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 90px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            margin: 11px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 0.015em;
+            color: #272C52;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            color: #888F9E;
+        }
+    }
+
+    .card {
+        padding: 40px;
+        height: auto;
+        background-color: $card-bg-color;
+        box-shadow: 0px 3px 20px 2px #CED7EC;
+        border-radius: 9px;
+
+        .month_price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            #views {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 135.1%;
+                letter-spacing: 0.175em;
+                color: #888F9E;
+            }
+            #price{
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 55px;
+                color: #2A325B;
+            }
+            #price::after{
+                position: relative;
+                top: -8px;
+                content: ' /month';
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.04em;
+                color: #888F9E;
+            }
+        }
+        
+    }
+}

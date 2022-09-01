@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Interactive priceng component</title>
 </head>
+
 <body>
-    
+    <main>
+
+        <header>
+            <h1>Simple, traffic-based pricing</h1>
+            <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+        </header>
+
+        <section class="card">
+            <div class="month_price">
+                <p id="views">100 pageviews</p>
+                <p id="price">$16.00</p>
+            </div>
+            <div class="slider">
+                <input type="range" id="volume" name="volume" min="0" max="5">
+            </div>
+            <div class="toggle">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="trial">
+                <p class="checklist"></p>
+                <p class="checklist"></p>
+                <p class="checklist"></p>
+                <button class="cta">Start my trial</button>
+            </div>
+        </section>
+
+    </main>
+
     <script src="main.js"></script>
 </body>
+
 </html>
