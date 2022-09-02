@@ -18,13 +18,15 @@
         </header>
 
         <section class="card">
-            <div class="month_price">
+            <div class="pageviews">
                 <p id="views"><output id="rangevalue">100k</output> pageviews</p>
-                <p id="price">$16.00</p>
             </div>
             <div class="slider_views">
                 <input type="range" id="views" name="views" min="1" max="5" oninput="rangevalue.value=value" value="3"/>
                 <!-- <output id="rangevalue">50</output> -->
+            </div>
+            <div class="month_price">
+                <p id="price">$16.00</p>
             </div>
             <div class="toggle_section">
                 <p>Monthly Billing</p>
@@ -33,16 +35,14 @@
                     <span class="slider round"></span>
                   </label>
                 <p>Yearly Billing</p>
-                <p id="discount">25% discount</p>
+                <p id="discount">25%</p>
             </div>
-            <div class="trial">
-                <aside>
+            <aside class="trial">
                     <p class="checklist">Unlimited websites</p>
                     <p class="checklist">100% data ownership</p>
                     <p class="checklist">Email reports</p>
-                </aside>
-                <button class="cta">Start my trial</button>
-            </div>
+            </aside>
+            <button class="cta">Start my trial</button>
         </section>
 
     </main>

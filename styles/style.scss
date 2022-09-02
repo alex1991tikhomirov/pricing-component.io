@@ -54,7 +54,7 @@ main {
         h1 {
             margin: 11px;
             font-weight: 700;
-            font-size: 28px;
+            font-size: calc(16px + 1vw);
             line-height: 38px;
             letter-spacing: 0.015em;
             color: #272C52;
@@ -65,23 +65,52 @@ main {
             font-size: 15px;
             line-height: 20px;
             color: #888F9E;
+            @media(max-width: 540px){
+                width: 60%;
+            }
         }
     }
 
     .card {
+        position: relative;
+        display: grid;
+        grid-template: repeat(4, auto) / repeat(2, 1fr);
         max-width: 540px;
         padding: 40px;
         height: auto;
         background-color: $card-bg-color;
         box-shadow: 0px 3px 20px 2px #CED7EC;
         border-radius: 9px;
+        @media (max-width:540px){
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: stretch;
+            justify-items: center;
+            min-width: 90vw;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid red;
 
+        }
+        .pageviews{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 135.1%;
+            color: $sub-text-color;
+            letter-spacing: 0.175em;
+        }
         .month_price {
+            position: absolute;
+            top: 20px;
+            right: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-
+            @media(max-width: 540px){
+                margin-bottom: 50px;
+                position: relative;
+            }
             #views {
                 font-weight: 500;
                 font-size: 14px;
@@ -95,6 +124,9 @@ main {
                 font-size: 40px;
                 line-height: 55px;
                 color: #2A325B;
+                @media(max-width: 540px){
+                    font-size: 32px;
+                }
             }
             #price::after{
                 position: relative;
@@ -105,13 +137,21 @@ main {
                 line-height: 22px;
                 letter-spacing: 0.04em;
                 color: #888F9E;
+                @media(max-width: 540px){
+                    font-size: 12px;
+                }
             }
         }
         .slider_views{
+            grid-column: 1 / -1;
             width: 100%;
             margin: 40px 0;
+            @media(max-width: 540px){
+                margin-bottom: 10px;
+            }
             input[type='range']{
                 @include input-style;
+
             }
             input[type="range"]::-webkit-slider-runnable-track{
                 background-image: linear-gradient(45deg, #0ECDC3, hsl(224, 65%, 95%));
@@ -119,12 +159,14 @@ main {
                 background-repeat: no-repeat;
                 height: 8px;
                 border-radius: 5px;
+
             }
             input[type="range"]::-moz-range-track{
                 background-image: linear-gradient(#0ECDC3, hsl(224, 65%, 95%));
                 background-size: 70% 100%;
                 background-repeat: no-repeat;
                 height: 8px;
+
             }
             input[type="range"]::-webkit-slider-thumb{
                 -webkit-appearance: none;
@@ -136,6 +178,7 @@ main {
                 width: 40px;
                 height: 40px;
                 border-radius: 20px;
+
             }
             input[type="range"]::-moz-range-thumb{
                 -webkit-appearance: none;
@@ -147,14 +190,17 @@ main {
                 width: 40px;
                 height: 40px;
                 border-radius: 20px;
+                
             }
             input[type="range"]::-webkit-slider-thumb:hover{
                 box-shadow: 0px 10px 12px #8EE8F2;
                 border: 2px solid #25aca0;
+
             }
             input[type="range"]::-webkit-slider-thumb:focus{
                 box-shadow: 0px 10px 12px #8EE8F2;
                 border: 2px solid #25aca0;
+                
             }
             input[type="range"]::-webkit-slider-thumb:active{
                 box-shadow: 0px 10px 12px #8EE8F2;
@@ -162,21 +208,40 @@ main {
             }
         }
         .toggle_section{
-            margin-bottom: 75px;
+            grid-column: 1 / -1;
+            margin-bottom: 70px;
             width: 100%;
             height: fit-content;
             display: flex;
             align-items: center;
             flex-direction: row;
             justify-content: flex-end;
+            @media (max-width: 540px){
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
             p{
                 margin: 0 10px;
                 font-weight: 600;
                 font-size: 12px;
                 line-height: 16px;
                 color: #888F9E;
+                @media (max-width: 540px){
+                   font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0;
+                }
             }
             @include toggle;
+            #discount::after{
+                content: ' percent';
+                @media (max-width: 540px){
+                    content: '';
+                }
+            }
             #discount{
                 margin-left: -4px;
                 padding: 1px 6px;
@@ -189,11 +254,16 @@ main {
             }
         }
         .trial{
-            width: 100%;
+            width: fit-content;
             display: flex;
-            align-items: center;
-            flex-direction: row;
+            align-items: flex-start;
+            flex-direction: column;
             justify-content: space-between;
+            @media(max-width:540px){
+                display: flex;
+                align-items: center;
+                justify-content:space-between;
+            }
             .checklist{
                 margin-bottom: 10px;
                 font-weight: 600;
@@ -208,11 +278,19 @@ main {
             }
         }
         .cta{
-            margin-left: 120px;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 20px;
+            margin-left: 68px;
             background-color: $CTA-bg-color;
             padding: 12px 45px;
             border-radius: 22px;
             color: #fff;
+            font-size: 12px;
+            @media(max-width:540px){
+                margin: 0;
+                margin-top: 20px;
+            }
         }
         .cta:hover{
             cursor: pointer;

@@ -87,7 +87,7 @@ main header {
 main header h1 {
   margin: 11px;
   font-weight: 700;
-  font-size: 28px;
+  font-size: calc(16px + 1vw);
   line-height: 38px;
   letter-spacing: 0.015em;
   color: #272C52;
@@ -98,7 +98,15 @@ main header h2 {
   line-height: 20px;
   color: #888F9E;
 }
+@media (max-width: 540px) {
+  main header h2 {
+    width: 60%;
+  }
+}
 main .card {
+  position: relative;
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(2, 1fr);
   max-width: 540px;
   padding: 40px;
   height: auto;
@@ -106,11 +114,39 @@ main .card {
   box-shadow: 0px 3px 20px 2px #CED7EC;
   border-radius: 9px;
 }
+@media (max-width: 540px) {
+  main .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    justify-items: center;
+    min-width: 90vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid red;
+  }
+}
+main .card .pageviews {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 135.1%;
+  color: hsl(221deg, 10%, 58%);
+  letter-spacing: 0.175em;
+}
 main .card .month_price {
+  position: absolute;
+  top: 20px;
+  right: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 540px) {
+  main .card .month_price {
+    margin-bottom: 50px;
+    position: relative;
+  }
 }
 main .card .month_price #views {
   font-weight: 500;
@@ -126,6 +162,11 @@ main .card .month_price #price {
   line-height: 55px;
   color: #2A325B;
 }
+@media (max-width: 540px) {
+  main .card .month_price #price {
+    font-size: 32px;
+  }
+}
 main .card .month_price #price::after {
   position: relative;
   top: -8px;
@@ -136,9 +177,20 @@ main .card .month_price #price::after {
   letter-spacing: 0.04em;
   color: #888F9E;
 }
+@media (max-width: 540px) {
+  main .card .month_price #price::after {
+    font-size: 12px;
+  }
+}
 main .card .slider_views {
+  grid-column: 1/-1;
   width: 100%;
   margin: 40px 0;
+}
+@media (max-width: 540px) {
+  main .card .slider_views {
+    margin-bottom: 10px;
+  }
 }
 main .card .slider_views input[type=range] {
   -webkit-appearance: none;
@@ -196,7 +248,8 @@ main .card .slider_views input[type=range]::-webkit-slider-thumb:active {
   background-color: #25aca0;
 }
 main .card .toggle_section {
-  margin-bottom: 75px;
+  grid-column: 1/-1;
+  margin-bottom: 70px;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -207,12 +260,28 @@ main .card .toggle_section {
   justify-content: flex-end;
   /* Rounded sliders */
 }
+@media (max-width: 540px) {
+  main .card .toggle_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 main .card .toggle_section p {
   margin: 0 10px;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   color: #888F9E;
+}
+@media (max-width: 540px) {
+  main .card .toggle_section p {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
 }
 main .card .toggle_section .switch {
   position: relative;
@@ -263,6 +332,14 @@ main .card .toggle_section .slider.round {
 main .card .toggle_section .slider.round:before {
   border-radius: 50%;
 }
+main .card .toggle_section #discount::after {
+  content: " percent";
+}
+@media (max-width: 540px) {
+  main .card .toggle_section #discount::after {
+    content: "";
+  }
+}
 main .card .toggle_section #discount {
   margin-left: -4px;
   padding: 1px 6px;
@@ -274,11 +351,20 @@ main .card .toggle_section #discount {
   color: hsl(15deg, 100%, 70%);
 }
 main .card .trial {
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 540px) {
+  main .card .trial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 main .card .trial .checklist {
   margin-bottom: 10px;
@@ -292,11 +378,25 @@ main .card .trial .checklist::before {
   margin-right: 17px;
 }
 main .card .cta {
-  margin-left: 120px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  margin-left: 68px;
   background-color: hsl(227deg, 35%, 25%);
   padding: 12px 45px;
   border-radius: 22px;
   color: #fff;
+  font-size: 12px;
+}
+@media (max-width: 540px) {
+  main .card .cta {
+    margin: 0;
+    margin-top: 20px;
+  }
 }
 main .card .cta:hover {
   cursor: pointer;
