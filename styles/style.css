@@ -71,7 +71,7 @@ body {
 }
 
 main header {
-  background-image: url("../images/pattern-circles.svg");
+  background-image: url("./images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center center;
   max-width: 540px;
@@ -216,9 +216,9 @@ main .card .slider_views input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -16px;
 <<<<<<< HEAD
-  background-image: url("../images/icon-slider.svg");
+  background-image: url("./images/icon-slider.svg");
 =======
-  background-image: url("images/icon-slider.svg");
+  background-image: url("./images/icon-slider.svg");
 >>>>>>> 3b962f1310ac89f03f592526640ff20351d05878
   background-repeat: no-repeat;
   background-position: center center;
@@ -230,7 +230,7 @@ main .card .slider_views input[type=range]::-webkit-slider-thumb {
 main .card .slider_views input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   margin-top: -16px;
-  background-image: url("../images/icon-slider.svg");
+  background-image: url("./images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #0ECDC3;
@@ -377,7 +377,7 @@ main .card .trial .checklist {
   color: #888F9E;
 }
 main .card .trial .checklist::before {
-  content: url("../images/icon-check.svg");
+  content: url("./images/icon-check.svg");
   margin-right: 17px;
 }
 main .card .cta {
