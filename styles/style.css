@@ -63,6 +63,7 @@ table {
 }
 
 body {
+  box-sizing: border-box;
   font-family: Manrope, "sans serif";
   display: flex;
   flex-direction: column;
@@ -199,27 +200,21 @@ main .card .slider_views input[type=range] {
   cursor: pointer;
   width: 100%;
 }
-main .card .slider_views input[type=range]::-webkit-slider-runnable-track {
-  background-image: linear-gradient(45deg, #0ECDC3, hsl(224deg, 65%, 95%));
+main .card .slider_views #views:hover {
+  box-sizing: border-box;
+  border: 1px solid rgb(253, 230, 253);
+}
+main .card .slider_views #views {
+  background-image: linear-gradient(45deg, #0ECDC3 70%, hsl(177deg, 100%, 18%));
   background-size: 50%;
   background-repeat: no-repeat;
   height: 8px;
   border-radius: 5px;
 }
-main .card .slider_views input[type=range]::-moz-range-track {
-  background-image: linear-gradient(#0ECDC3, hsl(224deg, 65%, 95%));
-  background-size: 70% 100%;
-  background-repeat: no-repeat;
-  height: 8px;
-}
 main .card .slider_views input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  margin-top: -16px;
-<<<<<<< HEAD
+  margin-top: -3px;
   background-image: url("../images/icon-slider.svg");
-=======
-  background-image: url("images/icon-slider.svg");
->>>>>>> 3b962f1310ac89f03f592526640ff20351d05878
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #0ECDC3;
@@ -261,7 +256,6 @@ main .card .toggle_section {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  /* Rounded sliders */
 }
 @media (max-width: 540px) {
   main .card .toggle_section {
@@ -286,54 +280,33 @@ main .card .toggle_section p {
     margin: 0;
   }
 }
-main .card .toggle_section .switch {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 20px;
-}
-main .card .toggle_section .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-main .card .toggle_section .slider {
-  position: absolute;
-  cursor: pointer;
-  top: -2px;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  background-color: hsl(223deg, 50%, 87%);
-  transition: 0.4s;
-}
-main .card .toggle_section .slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #fff;
-  transition: 0.2s;
-}
-main .card .toggle_section input:checked + .slider {
-  background-color: hsl(223deg, 50%, 87%);
-}
-main .card .toggle_section input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-main .card .toggle_section input:hover + .slider {
+main .card .toggle_section #toggle.active {
   background-color: hsl(174deg, 86%, 45%);
 }
-main .card .toggle_section input:checked + .slider:before {
-  transform: translateX(23px);
+main .card .toggle_section #toggle.active #circle {
+  left: 23px;
 }
-main .card .toggle_section .slider.round {
-  border-radius: 34px;
+main .card .toggle_section .active {
+  background-color: hsl(174deg, 86%, 45%);
 }
-main .card .toggle_section .slider.round:before {
-  border-radius: 50%;
+main .card .toggle_section #toggle {
+  position: relative;
+  width: 43px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #C5D0E9;
+  cursor: pointer;
+  transition: ease-out 0.35s;
+}
+main .card .toggle_section #toggle #circle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #fff;
+  top: 4px;
+  left: 4px;
+  transition: ease-in 0.35s;
 }
 main .card .toggle_section #discount::after {
   content: " percent";

@@ -19,10 +19,10 @@
 
         <section class="card">
             <div class="pageviews">
-                <p id="views"><output id="rangevalue">100k</output> pageviews</p>
+                <p><span id="kviews">100K</span> pageviews</p>
             </div>
             <div class="slider_views">
-                <input type="range" id="views" name="views" min="1" max="5" oninput="rangevalue.value=value" value="3"/>
+                <input type="range" id="views" name="views" min="1" max="5" value=""/>
                 <!-- <output id="rangevalue">50</output> -->
             </div>
             <div class="month_price">
@@ -30,10 +30,9 @@
             </div>
             <div class="toggle_section">
                 <p>Monthly Billing</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
+                <div id="toggle">
+                    <span id="circle"></span>
+                </div>
                 <p>Yearly Billing</p>
                 <p id="discount">25%</p>
             </div>

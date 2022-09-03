@@ -29,6 +29,7 @@
 
 //beginnning of styling
 body {
+    box-sizing: border-box;
     font-family: $main-font-family;
     display: flex;
     flex-direction: column;
@@ -152,24 +153,21 @@ main {
                 @include input-style;
 
             }
-            input[type="range"]::-webkit-slider-runnable-track{
-                background-image: linear-gradient(45deg, #0ECDC3, hsl(224, 65%, 95%));
-                background-size: 50% ;
+            #views:hover{
+                box-sizing: border-box;
+                border: 1px solid rgb(253, 230, 253);
+            }
+            #views{
+                background-image: linear-gradient(45deg, #0ECDC3 70%, hsl(177, 100%, 18%));
+                background-size: 50%;
                 background-repeat: no-repeat;
                 height: 8px;
                 border-radius: 5px;
 
             }
-            input[type="range"]::-moz-range-track{
-                background-image: linear-gradient(#0ECDC3, hsl(224, 65%, 95%));
-                background-size: 70% 100%;
-                background-repeat: no-repeat;
-                height: 8px;
-
-            }
             input[type="range"]::-webkit-slider-thumb{
                 -webkit-appearance: none;
-                margin-top: -16px;
+                margin-top: -3px;
                 background-image: url('../images/icon-slider.svg');
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -234,7 +232,35 @@ main {
                     margin: 0;
                 }
             }
-            @include toggle;
+            #toggle.active{
+                background-color: $slider-bg-color;
+                    #circle{
+                    left: 23px;
+                    }
+                }
+            .active{
+                background-color: $slider-bg-color;
+            }
+            #toggle{
+                position: relative;
+                width: 43px;
+                height: 22px;
+                border-radius: 11px;
+                background-color:#C5D0E9;
+                cursor: pointer;
+                transition: ease-out 0.35s;
+                #circle{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 7px;
+                    background-color: #fff;
+                    top: 4px;
+                    left: 4px;
+                    transition: ease-in 0.35s;
+                }
+                
+            }
             #discount::after{
                 content: ' percent';
                 @media (max-width: 540px){
