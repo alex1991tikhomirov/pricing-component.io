@@ -73,9 +73,9 @@ body {
 
 main header {
 <<<<<<< HEAD
-  background-image: url("/images/pattern-circles.svg");
+  background-image: url(/images/pattern-circles.svg);
 =======
-  background-image: url("./images/pattern-circles.svg");
+  background-image: url(/images/pattern-circles.svg);
 >>>>>>> aa7a78129c48b37f5f8521467878c9eacb8b3edb
   background-repeat: no-repeat;
   background-position: center center;
@@ -219,9 +219,9 @@ main .card .slider_views input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -3px;
 <<<<<<< HEAD
-  background-image: url("/images/icon-slider.svg");
+  background-image: url(/images/icon-slider.svg);
 =======
-  background-image: url("./images/icon-slider.svg");
+  background-image: url(/images/icon-slider.svg);
 >>>>>>> aa7a78129c48b37f5f8521467878c9eacb8b3edb
   background-repeat: no-repeat;
   background-position: center center;
@@ -234,9 +234,9 @@ main .card .slider_views input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   margin-top: -16px;
 <<<<<<< HEAD
-  background-image: url("/images/icon-slider.svg");
+  background-image: url(/images/icon-slider.svg);
 =======
-  background-image: url("./images/icon-slider.svg");
+  background-image: url(/images/icon-slider.svg);
 >>>>>>> aa7a78129c48b37f5f8521467878c9eacb8b3edb
   background-repeat: no-repeat;
   background-position: center center;
@@ -363,9 +363,9 @@ main .card .trial .checklist {
 }
 main .card .trial .checklist::before {
 <<<<<<< HEAD
-  content: url("/images/icon-check.svg");
+  content: url(/images/icon-check.svg);
 =======
-  content: url("./images/icon-check.svg");
+  content: url(/images/icon-check.svg);
 >>>>>>> aa7a78129c48b37f5f8521467878c9eacb8b3edb
   margin-right: 17px;
 }
